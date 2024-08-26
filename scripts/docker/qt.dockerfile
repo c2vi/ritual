@@ -1,6 +1,6 @@
 FROM debian:buster as qt_downloader
 RUN apt-get update
-RUN apt-get install -y python3-bs4 p7zip-full
+RUN apt-get install -y python3-bs4 p7zip-full ca-certificates
 RUN mkdir -p /opt/qt
 WORKDIR /opt/qt
 COPY scripts/install_qt.py /
